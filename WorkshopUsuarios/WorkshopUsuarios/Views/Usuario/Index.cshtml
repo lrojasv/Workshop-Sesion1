@@ -1,0 +1,45 @@
+﻿@model List<WorkshopUsuarios.Models.Usuario>
+
+@{
+    ViewBag.Title = "Búsqueda de Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Búsqueda de Usuarios</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido Paterno
+            </th>
+            <th>
+                Apellido Materno
+            </th>
+        </tr>
+    </thead>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <th scope="row">
+                    @usuario.Id
+                </th>
+                <td>
+                    @usuario.Nombre
+                </td>
+                <td>
+                    @usuario.ApellidoPaterno
+                </td>
+                <td>
+                    @usuario.ApellidoMaterno
+                </td>
+            </tr>
+        }
+</table>
+
